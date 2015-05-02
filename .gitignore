@@ -1,5 +1,6 @@
 # Xcode
 #
+EaseMobSDK
 build/
 *.pbxuser
 !default.pbxuser
