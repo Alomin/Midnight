@@ -60,10 +60,10 @@
     [super viewDidLoad];
     
     [self searchController];
-    //self.searchBar.frame = CGRectMake(0, 0, self.view.frame.size.width, 44);
-    //[self.view addSubview:self.searchBar];
+    self.searchBar.frame = CGRectMake(0, 0, self.view.frame.size.width, 44);
+    [self.view addSubview:self.searchBar];
     
-    self.tableView.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height); //- self.searchBar.frame.size.height);
+    self.tableView.frame = CGRectMake(0, self.searchBar.frame.size.height, self.view.frame.size.width, self.view.frame.size.height - self.searchBar.frame.size.height);
     [self.view addSubview:self.tableView];
     [self.tableView addSubview:self.slimeView];
     
@@ -210,7 +210,7 @@
 {
     // Return the number of rows in the section.
     if (section == 0) {
-        return 1;
+        return 2;
 //        return 1;
     }
     
@@ -472,7 +472,6 @@
 
 - (void)cellImageViewLongPressAtIndexPath:(NSIndexPath *)indexPath
 {
-
     if (indexPath.section == 0 && indexPath.row == 1) {
         // 群组
         return;

@@ -152,7 +152,7 @@ static const CGFloat kDefaultPlaySoundInterval = 3.0;
                          withFinishedUnselectedImage:[UIImage imageNamed:@"tabbar_chats"]];
     [self unSelectedTapTabBarItems:_chatListVC.tabBarItem];
     [self selectedTapTabBarItems:_chatListVC.tabBarItem];
-    /*
+    
     _contactsVC = [[ContactsViewController alloc] initWithNibName:nil bundle:nil];
     _contactsVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"title.addressbook", @"AddressBook")
                                                            image:nil
@@ -161,18 +161,18 @@ static const CGFloat kDefaultPlaySoundInterval = 3.0;
                          withFinishedUnselectedImage:[UIImage imageNamed:@"tabbar_contacts"]];
     [self unSelectedTapTabBarItems:_contactsVC.tabBarItem];
     [self selectedTapTabBarItems:_contactsVC.tabBarItem];
-    */
+    
     _settingsVC = [[SettingsViewController alloc] init];
     _settingsVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"title.setting", @"Setting")
                                                            image:nil
-                                                             tag:1];
+                                                             tag:2];
     [_settingsVC.tabBarItem setFinishedSelectedImage:[UIImage imageNamed:@"tabbar_settingHL"]
                          withFinishedUnselectedImage:[UIImage imageNamed:@"tabbar_setting"]];
     _settingsVC.view.autoresizingMask = UIViewAutoresizingFlexibleHeight;
     [self unSelectedTapTabBarItems:_settingsVC.tabBarItem];
     [self selectedTapTabBarItems:_settingsVC.tabBarItem];
     
-    self.viewControllers = @[_chatListVC, _settingsVC];
+    self.viewControllers = @[_chatListVC, _contactsVC, _settingsVC];
     [self selectedTapTabBarItems:_chatListVC.tabBarItem];
 }
 

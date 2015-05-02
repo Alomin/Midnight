@@ -91,7 +91,7 @@
         _mainController = nil;
         LoginViewController *loginController = [[LoginViewController alloc] init];
         nav = [[UINavigationController alloc] initWithRootViewController:loginController];
-        loginController.title = NSLocalizedString(@"AppName", @"MidNight");
+        loginController.title = NSLocalizedString(@"AppName", @"EaseMobDemo");
     }
     
     //设置7.0以下的导航栏

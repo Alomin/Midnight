@@ -46,7 +46,7 @@
 "loginUserRemoveFromServer" = "your account has been removed from the server side";
 
 //app
-"AppName" = "MidNight";
+"AppName" = "EaseMobDemo";
 
 //error des
 "error.connectServerFail" = "Connect to the server failed!";
